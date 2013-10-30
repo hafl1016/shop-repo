@@ -1,6 +1,6 @@
 package shop.bestellverwaltung.rest;
 
-import static de.shop.util.Constants.SELF_LINK;
+import static shop.util.Constants.SELF_LINK;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.APPLICATION_XML;
 import static javax.ws.rs.core.MediaType.TEXT_XML;
@@ -22,8 +22,8 @@ import shop.bestellverwaltung.domain.Bestellung;
 import shop.kundenverwaltung.domain.AbstractKunde;
 import shop.kundenverwaltung.rest.KundeResource;
 import shop.util.Mock;
-import shop.util.UriHelper;
-import shop.util.exception.NotFoundException;
+import shop.util.rest.UriHelper;
+import shop.util.rest.NotFoundException;
 
 
 @Path("/bestellungen")
