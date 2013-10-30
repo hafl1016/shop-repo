@@ -1,4 +1,4 @@
-package de.shop.util;
+package shop.util;
 
 import java.util.ArrayList;
 import java.util.HashSet;
