@@ -35,8 +35,8 @@ import shop.bestellverwaltung.domain.Bestellung;
 import shop.bestellverwaltung.rest.BestellungResource;
 import shop.kundenverwaltung.domain.AbstractKunde;
 import shop.util.Mock;
-import shop.util.rest.UriHelper;
-import shop.util.rest.NotFoundException;
+import shop.util.UriHelper;
+import shop.util.exception.NotFoundException;
 
 
 @Path("/kunden")
