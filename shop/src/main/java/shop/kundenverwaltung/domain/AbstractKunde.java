@@ -1,9 +1,8 @@
 package shop.kundenverwaltung.domain;
+
 import java.net.URI;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlTransient;
-
 import shop.bestellverwaltung.domain.*;
 
 public abstract class AbstractKunde {

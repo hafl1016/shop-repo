@@ -1,4 +1,4 @@
-package de.shop.kundenverwaltung.domain;
+package shop.kundenverwaltung.domain;
 
 import java.util.Set;
 
