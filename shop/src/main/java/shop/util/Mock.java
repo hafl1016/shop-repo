@@ -5,12 +5,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import de.shop.bestellverwaltung.domain.Bestellung;
-import de.shop.kundenverwaltung.domain.AbstractKunde;
-import de.shop.kundenverwaltung.domain.Adresse;
-import de.shop.kundenverwaltung.domain.Firmenkunde;
-import de.shop.kundenverwaltung.domain.HobbyType;
-import de.shop.kundenverwaltung.domain.Privatkunde;
+import shop.bestellverwaltung.domain.Bestellung;
+import shop.kundenverwaltung.domain.AbstractKunde;
+import shop.kundenverwaltung.domain.Adresse;
+import shop.kundenverwaltung.domain.Firmenkunde;
+import shop.kundenverwaltung.domain.HobbyType;
+import shop.kundenverwaltung.domain.Privatkunde;
 
 
 public final class Mock {
