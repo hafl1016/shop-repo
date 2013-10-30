@@ -1,6 +1,6 @@
 package shop;
 
-public class Domain {
+public class Kundenverwaltung_Domain {
 private String vorname;
 private String nachname;
 private int id;
