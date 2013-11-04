@@ -58,7 +58,7 @@ public class ArtikelResource {
 	public Response findArtikelById(@PathParam("id") Long id, @Context UriInfo uriInfo) {
 		final Artikel artikel = as.findArtikelById(id);
 		if (artikel == null) {
-			throw new NotFoundException(NOT_FOUND_ID, id);
+			throw new NotFoundException(NOT_FOUND_ID);
 		}
 
 		return Response.ok(artikel)
