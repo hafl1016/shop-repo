@@ -1,6 +1,7 @@
 package shop.util;
 
 import java.util.ArrayList;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -11,6 +12,8 @@ import shop.kundenverwaltung.domain.Adresse;
 import shop.kundenverwaltung.domain.Firmenkunde;
 import shop.kundenverwaltung.domain.HobbyType;
 import shop.kundenverwaltung.domain.Privatkunde;
+
+import shop.artikelverwaltung.domain.Artikel;
 
 
 public final class Mock {
@@ -113,6 +116,13 @@ public final class Mock {
 
 	public static void updateKunde(AbstractKunde kunde) {
 		System.out.println("Aktualisierter Kunde: " + kunde);
+	}
+	
+	public static Artikel findArtikelById(Long id) {
+		final Artikel artikel = new Artikel();
+		artikel.setId(id);
+		artikel.setBezeichnung("Bezeichnung_" + id);
+		return artikel;
 	}
 
 	public static void deleteKunde(Long kundeId) {
