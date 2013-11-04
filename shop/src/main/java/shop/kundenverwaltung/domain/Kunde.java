@@ -5,11 +5,8 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlTransient;
 import shop.bestellverwaltung.domain.*;
 
-public abstract class Kunde {
-	
-	public static final String PRIVATKUNDE = "P";
-	public static final String FIRMENKUNDE = "F";
-	
+public class Kunde {
+
 	private Long id;
 	private String nachname;
 	private String email;
@@ -85,7 +82,7 @@ public abstract class Kunde {
 	
 	@Override
 	public String toString() {
-		return "AbstractKunde [id=" + id + ", nachname=" + nachname + ", email=" + email
+		return "Kunde [id=" + id + ", nachname=" + nachname + ", email=" + email
 			   + ", bestellungenUri=" + bestellungenUri + "]";
 	}
 }
