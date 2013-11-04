@@ -5,7 +5,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlTransient;
 import shop.bestellverwaltung.domain.*;
 
-public abstract class AbstractKunde {
+public abstract class Kunde {
 	
 	public static final String PRIVATKUNDE = "P";
 	public static final String FIRMENKUNDE = "F";
@@ -73,7 +73,7 @@ public abstract class AbstractKunde {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		AbstractKunde other = (AbstractKunde) obj;
+		Kunde other = (Kunde) obj;
 		if (email == null) {
 			if (other.email != null)
 				return false;
