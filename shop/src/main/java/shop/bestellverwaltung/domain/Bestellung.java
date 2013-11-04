@@ -3,8 +3,11 @@ package shop.bestellverwaltung.domain;
 import java.io.Serializable;
 import java.net.URI;
 
+import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 import shop.kundenverwaltung.domain.AbstractKunde;
 
@@ -12,7 +15,10 @@ import shop.kundenverwaltung.domain.AbstractKunde;
 public class Bestellung	implements Serializable {
 		private static final long serialVersionUID = 1618359234119003714L;
 		
+		@NotEmpty
 		private Long id;
+		
+		@NotNull
 		private boolean ausgeliefert;
 		
 		@XmlTransient
