@@ -9,9 +9,6 @@ import java.util.Set;
 import shop.bestellverwaltung.domain.Bestellung;
 import shop.kundenverwaltung.domain.AbstractKunde;
 import shop.kundenverwaltung.domain.Adresse;
-import shop.kundenverwaltung.domain.Firmenkunde;
-import shop.kundenverwaltung.domain.HobbyType;
-import shop.kundenverwaltung.domain.Privatkunde;
 
 import shop.artikelverwaltung.domain.Artikel;
 
@@ -26,7 +23,7 @@ public final class Mock {
 			return null;
 		}
 		
-		final AbstractKunde kunde = id % 2 == 1 ? new Privatkunde() : new Firmenkunde();
+		final AbstractKunde kunde = id % 2 == 1;
 		kunde.setId(id);
 		kunde.setNachname("Nachname" + id);
 		kunde.setEmail("" + id + "@hska.de");
@@ -38,14 +35,7 @@ public final class Mock {
 		adresse.setKunde(kunde);
 		kunde.setAdresse(adresse);
 		
-		if (kunde.getClass().equals(Privatkunde.class)) {
-			final Privatkunde privatkunde = (Privatkunde) kunde;
-			final Set<HobbyType> hobbies = new HashSet<>();
-			hobbies.add(HobbyType.LESEN);
-			hobbies.add(HobbyType.REISEN);
-			privatkunde.setHobbies(hobbies);
-		}
-		
+
 		return kunde;
 	}
 
