@@ -1,6 +1,7 @@
 package shop.artikelverwaltung.domain;
 
 import java.io.Serializable;
+import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class Artikel implements Serializable {
