@@ -59,6 +59,7 @@ public class KundeResource {
 	@Path("version")
 	public String getVersion() {
 		return "1.0";
+		//TODO nötig?
 	}
 	
 	@GET
@@ -108,6 +109,7 @@ public class KundeResource {
 	
 	public URI getUriKunde(Kunde kunde, UriInfo uriInfo) {
 		return uriHelper.getUri(KundeResource.class, "findKundeById", kunde.getId(), uriInfo);
+		// TODO was macht der urihelper?
 	}
 
 	
@@ -173,6 +175,7 @@ public class KundeResource {
 	private Link[] getTransitionalLinksBestellungen(List<Bestellung> bestellungen, Kunde kunde, UriInfo uriInfo) {
 		if (bestellungen == null || bestellungen.isEmpty()) {
 			return new Link[0];
+			//TODO warum das?
 		}
 		
 		final Link self = Link.fromUri(getUriBestellungen(kunde, uriInfo))

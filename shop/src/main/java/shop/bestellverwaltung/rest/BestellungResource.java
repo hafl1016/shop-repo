@@ -60,7 +60,7 @@ public class BestellungResource {
 		final Kunde kunde = bestellung.getKunde();
 		if (kunde != null) {
 			final URI kundeUri = kundeResource.getUriKunde(bestellung.getKunde(), uriInfo);
-			bestellung.setKundeUri(kundeUri);
+			bestellung.setKundeUri(kundeUri);//TODO was macht das?
 		}
 	}
 	
@@ -69,6 +69,7 @@ public class BestellungResource {
                               .rel(SELF_LINK)
                               .build();
 		return new Link[] { self };
+		//TODO warum? was macht das?
 	}
 	
 	public URI getUriBestellung(Bestellung bestellung, UriInfo uriInfo) {

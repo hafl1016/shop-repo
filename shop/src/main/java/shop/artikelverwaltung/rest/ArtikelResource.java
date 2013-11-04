@@ -45,12 +45,12 @@ public class ArtikelResource {
 	
 	@PostConstruct
 	private void postConstruct() {
-		LOGGER.debugf("CDI-faehiges Bean %s wurde erzeugt", this);
+		LOGGER.debugf("CDI-faehiges Bean %s wurde erzeugt", this);//TODO nötig?
 	}
 	
 	@PreDestroy
 	private void preDestroy() {
-		LOGGER.debugf("CDI-faehiges Bean %s wird geloescht", this);
+		LOGGER.debugf("CDI-faehiges Bean %s wird geloescht", this);//TODO nötig?
 	}
 	
 	@GET
@@ -70,7 +70,7 @@ public class ArtikelResource {
 		final Link self = Link.fromUri(getUriArtikel(artikel, uriInfo))
                               .rel(SELF_LINK)
                               .build();
-
+//TODO nötig? für was?
 		return new Link[] { self };
 	}
 	
