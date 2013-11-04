@@ -7,7 +7,6 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import shop.artikelverwaltung.domain.Artikel;
-import shop.util.interceptor.Log;
 import shop.util.Mock;
 
 

@@ -6,8 +6,6 @@ import javax.xml.bind.annotation.XmlTransient;
 import shop.bestellverwaltung.domain.*;
 
 public abstract class AbstractKunde {
-
-private static final long serialVersionUID = 7401524595142572933L;
 	
 	public static final String PRIVATKUNDE = "P";
 	public static final String FIRMENKUNDE = "F";
