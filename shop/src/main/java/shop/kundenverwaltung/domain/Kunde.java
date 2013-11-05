@@ -10,13 +10,15 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.URL;
 
 import shop.bestellverwaltung.domain.*;
 
 public class Kunde {
 
 	@NotEmpty
-	private Long id;
+	@Pattern(regexp = "[1-9][0-9]*")
+	private long id;
 	
 	@NotNull
 	@Size(min = 2, max = 32)
@@ -36,16 +38,15 @@ public class Kunde {
 	@NotNull
 	private String geburtsdatum;	//TODO Datefunktion nachschauen
 	
-	@NotNull
 	@Valid
 	private Adresse adresse;
 	
-	@NotNull
 	@Size(min = 1)
 	@Valid
 	@XmlTransient
 	private List<Bestellung> bestellungen;
 	
+	@URL	//TODO notwendig?
 	private URI bestellungenUri;
 
 	public Long getId() {
@@ -97,6 +98,8 @@ public class Kunde {
 	public void setBestellungenUri(URI bestellungenUri) {
 		this.bestellungenUri = bestellungenUri;
 	}
+
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -109,13 +112,12 @@ public class Kunde {
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result
 				+ ((geburtsdatum == null) ? 0 : geburtsdatum.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result
 				+ ((nachname == null) ? 0 : nachname.hashCode());
 		result = prime * result + ((vorname == null) ? 0 : vorname.hashCode());
 		return result;
 	}
-	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -150,10 +152,7 @@ public class Kunde {
 				return false;
 		} else if (!geburtsdatum.equals(other.geburtsdatum))
 			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
+		if (id != other.id)
 			return false;
 		if (nachname == null) {
 			if (other.nachname != null)

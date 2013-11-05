@@ -42,8 +42,8 @@ import shop.util.rest.NotFoundException;
 @Produces({ APPLICATION_JSON, APPLICATION_XML + ";qs=0.75", TEXT_XML + ";qs=0.5" })
 @Consumes
 public class KundeResource {
-	public static final String KUNDEN_ID_PATH_PARAM = "kundeId";
-	public static final String KUNDEN_NACHNAME_QUERY_PARAM = "nachname";
+	//public static final String KUNDEN_ID_PATH_PARAM = "kundeId";
+	//public static final String KUNDEN_NACHNAME_QUERY_PARAM = "nachname";
 	
 	@Context
 	private UriInfo uriInfo;
@@ -63,8 +63,8 @@ public class KundeResource {
 	}
 	
 	@GET
-	@Path("{" + KUNDEN_ID_PATH_PARAM + ":[1-9][0-9]*}")
-	public Response findKundeById(@PathParam(KUNDEN_ID_PATH_PARAM) Long id) {
+	@Path("{id:[1-9][0-9]*}")
+	public Response findKundeById(@PathParam("id") long id) {
 		final Kunde kunde = Mock.findKundeById(id);
 		if (kunde == null) {
 			throw new NotFoundException("Kein Kunde mit der ID " + id + " gefunden.");
@@ -114,7 +114,7 @@ public class KundeResource {
 
 	
 	@GET
-	public Response findKundenByNachname(@QueryParam(KUNDEN_NACHNAME_QUERY_PARAM) String nachname) {
+	public Response findKundenByNachname(@QueryParam("nachname") String nachname) {
 		List<? extends Kunde> kunden = null;
 		if (nachname != null) {
 			kunden = Mock.findKundenByNachname(nachname);

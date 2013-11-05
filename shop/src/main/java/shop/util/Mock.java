@@ -16,20 +16,23 @@ public final class Mock {
 	private static final int MAX_KUNDEN = 8;
 	private static final int MAX_BESTELLUNGEN = 4;
 
-	public static Kunde findKundeById(Long id) {
+	public static Kunde findKundeById(long id) {
 		if (id > MAX_ID) {
 			return null;
 		}
 		
 		final Kunde kunde = new Kunde();
 		kunde.setId(id);
-		kunde.setNachname("Nachname" + id);
-		kunde.setEmail("" + id + "@hska.de");
+		kunde.setNachname("Müller");
+		kunde.setVorname("Peter");
+		kunde.setGeburtsdatum("02.04.1994");
+		kunde.setEmail("test@hska.de");
 		
 		final Adresse adresse = new Adresse();
-		adresse.setId(id + 1);       
+		adresse.setId(id + 1);
+		adresse.setStrasse("Moltkestrasse");
 		adresse.setPlz("12345");
-		adresse.setOrt("Testort");
+		adresse.setOrt("Karlsruhe");
 		adresse.setKunde(kunde);
 		kunde.setAdresse(adresse);
 		
