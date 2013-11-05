@@ -23,7 +23,7 @@ public final class Mock {
 		
 		final Kunde kunde = new Kunde();
 		kunde.setId(id);
-		kunde.setNachname("Müller");
+		kunde.setNachname("Mueller");
 		kunde.setVorname("Peter");
 		kunde.setGeburtsdatum("02.04.1994");
 		kunde.setEmail("test@hska.de");

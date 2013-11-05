@@ -70,10 +70,10 @@ public class KundeResource {
 			throw new NotFoundException("Kein Kunde mit der ID " + id + " gefunden.");
 		}
 		
-		setStructuralLinks(kunde, uriInfo);
+		//setStructuralLinks(kunde, uriInfo);
 		
 		return Response.ok(kunde)
-                       .links(getTransitionalLinks(kunde, uriInfo))
+                       .links(getTransitionalLinks(kunde, uriInfo)) //TODO funktioniert nicht!
                        .build();
 	}
 	
