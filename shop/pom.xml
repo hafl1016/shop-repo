@@ -50,7 +50,6 @@
 	<name>shop</name>
 	
 	<url>http://www.iwi.hs-karlsruhe.de</url>
-	<inceptionYear>2009</inceptionYear>
 	<description>Semester-Projekt</description>
 	
 	<!-- scm = source code management = Versionsmanagement -->
@@ -74,14 +73,14 @@
 	
 	<developers>
 		<developer>
-			<id>Juergen.Zimmermann</id>
-			<name>J&#252;rgen Zimmermann</name>
-			<email>Juergen.Zimmermann@HS-Karlsruhe.de</email>
+			<id>ecch1011</id>
+			<name>Christian Eckert</name>
+			<email>ecch1011@HS-Karlsruhe.de</email>
 			<url>http://www.iwi.hs-karlsruhe.de</url>
 			<organization>Hochschule Karlsruhe</organization>
 			<organizationUrl>http://www.iwi.hs-karlsruhe.de</organizationUrl>
 			<roles>
-				<role>Dozent</role>
+				<role>Student</role>
 			</roles>
 			<timezone>+1</timezone>     <!-- relativ zu GMT -->
 			<properties>
@@ -1233,4 +1232,5 @@
 			</build>
 		</profile>
 	</profiles>
+	<inceptionYear>2013</inceptionYear>
 </project>
