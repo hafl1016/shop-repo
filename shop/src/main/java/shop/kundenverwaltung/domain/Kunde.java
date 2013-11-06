@@ -2,6 +2,7 @@ package shop.kundenverwaltung.domain;
 
 import java.net.URI;
 import java.util.List;
+import java.io.Serializable;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -14,7 +15,8 @@ import org.hibernate.validator.constraints.URL;
 
 import shop.bestellverwaltung.domain.*;
 
-public class Kunde {
+public class Kunde implements Serializable{
+	private static final long serialVersionUID = 7401524595142572933L;
 
 	@NotEmpty
 	@Pattern(regexp = "[1-9][0-9]*")

@@ -1,12 +1,14 @@
 package shop.kundenverwaltung.domain;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class Adresse {
+public class Adresse implements Serializable{
+	private static final long serialVersionUID = -3029272617931844501L;
 
 	@NotEmpty
 	private Long id;	//FIXME ist das noetig in der klasse adresse?
