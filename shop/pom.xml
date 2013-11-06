@@ -91,6 +91,24 @@
 		</developer>
 		
 		<developer>
+			<id>fama1018</id>
+			<name>Marius Faßbender</name>
+			<email>fama1018@HS-Karlsruhe.de</email>
+			<url>http://www.iwi.hs-karlsruhe.de</url>
+			<organization>Hochschule Karlsruhe</organization>
+			<organizationUrl>http://www.iwi.hs-karlsruhe.de</organizationUrl>
+			<roles>
+				<role>Student</role>
+			</roles>
+			<timezone>+1</timezone>     <!-- relativ zu GMT -->
+			<properties>
+				<!--
+				<picUrl>http://my.host.com/my/pic.gif</picUrl>
+				-->
+			</properties>
+		</developer>
+		
+		<developer>
 			<id>hafl1016</id>
 			<name>Florian Haamann</name>
 			<email>hafl1016@HS-Karlsruhe.de</email>
