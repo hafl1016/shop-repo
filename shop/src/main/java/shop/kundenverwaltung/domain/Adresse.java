@@ -126,7 +126,6 @@ public class Adresse implements Serializable{
 	@Override
 	public String toString() {
 		return "Adresse [id=" + id + ", strasse=" + strasse + ", hausnummer="
-				+ hausnummer + ", plz=" + plz + ", ort=" + ort + ", kunde="
-				+ kunde + "]";
+				+ hausnummer + ", plz=" + plz + ", ort=" + ort + "]";
 	}
 }

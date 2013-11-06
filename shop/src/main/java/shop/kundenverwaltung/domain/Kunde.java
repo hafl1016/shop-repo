@@ -3,52 +3,53 @@ package shop.kundenverwaltung.domain;
 import java.net.URI;
 import java.util.List;
 import java.io.Serializable;
-
+/*
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlTransient;
-
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.URL;
-
+*/
+import javax.xml.bind.annotation.XmlRootElement;
 import shop.bestellverwaltung.domain.*;
 
+@XmlRootElement
 public class Kunde implements Serializable{
 	private static final long serialVersionUID = 7401524595142572933L;
 
-	@NotEmpty
-	@Pattern(regexp = "[1-9][0-9]*")
+	//@NotEmpty
+	//@Pattern(regexp = "[1-9][0-9]*")
 	private long id;
 	
-	@NotNull
-	@Size(min = 2, max = 32)
-	@Pattern(regexp = "[A-ZÄÖÜ][a-zäöüß]+")	//TODO Umlaute
+	//@NotNull
+	//@Size(min = 2, max = 32)
+	//@Pattern(regexp = "[A-ZÄÖÜ][a-zäöüß]+")	//TODO Umlaute
 	private String nachname;
 	
-	@NotNull
-	@Size(min = 2,max = 32)
-	@Pattern(regexp = "[A-ZÄÖÜ][a-zäöüß]+") //TODO Umlaute
+	//@NotNull
+	//@Size(min = 2,max = 32)
+	//@Pattern(regexp = "[A-ZÄÖÜ][a-zäöüß]+") //TODO Umlaute
 	private String vorname;
 	
-	@NotNull
-	@Size(max = 128)
-	@Pattern(regexp = "[\\w.%-]+@[\\w.%-]+\\.[A-Za-z]{2,4}")
+	//@NotNull
+	//@Size(max = 128)
+	//@Pattern(regexp = "[\\w.%-]+@[\\w.%-]+\\.[A-Za-z]{2,4}")
 	private String email;
 	
-	@NotNull
+	//@NotNull
 	private String geburtsdatum;	//TODO Datefunktion nachschauen
 	
-	@Valid
+	//@Valid
 	private Adresse adresse;
 	
-	@Size(min = 1)
-	@Valid
-	@XmlTransient
+	//@Size(min = 1)
+	//@Valid
+	//@XmlTransient
 	private List<Bestellung> bestellungen;
 	
-	@URL	//TODO notwendig?
+	//@URL	//TODO notwendig?
 	private URI bestellungenUri;
 
 	public Long getId() {
@@ -173,8 +174,7 @@ public class Kunde implements Serializable{
 	public String toString() {
 		return "Kunde [id=" + id + ", nachname=" + nachname + ", vorname="
 				+ vorname + ", email=" + email + ", geburtsdatum="
-				+ geburtsdatum + ", adresse=" + adresse + ", bestellungen="
-				+ bestellungen + ", bestellungenUri=" + bestellungenUri + "]";
+				+ geburtsdatum + ", adresse=" + adresse + "]";
 	}
 }
 

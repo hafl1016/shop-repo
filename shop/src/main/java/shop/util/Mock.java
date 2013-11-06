@@ -1,13 +1,11 @@
 package shop.util;
 
 import java.util.ArrayList;
-
 import java.util.List;
 
 import shop.bestellverwaltung.domain.Bestellung;
 import shop.kundenverwaltung.domain.Kunde;
 import shop.kundenverwaltung.domain.Adresse;
-
 import shop.artikelverwaltung.domain.Artikel;
 
 
@@ -36,7 +34,6 @@ public final class Mock {
 		adresse.setKunde(kunde);
 		kunde.setAdresse(adresse);
 		
-
 		return kunde;
 	}
 
